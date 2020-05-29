@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算</title>
+</head>
+
+<body>
+    <div><input type="text" id="yusuan"></div>
+    <div><input type="text" id="price"><input type="button" value="计算" id="sum"></div>
+    <script>
+        var yusuan = document.querySelector("#yusuan");
+        var price = document.querySelector("#price");
+        var sum = document.querySelector("#sum");
+        // var x = "1 22 3";
+
+        sum.onclick = function () {
+            // alert(price.value);
+            var arr = price.value.split(" ");
+            // console.log(arr);
+            var a = arr.map(Number);
+            console.log(a);
+
+            var s = 0; for (i = 0; i < a.length; i++) {
+                // document.write(arr[i]);
+                s += a[i];
+            }
+            console.log(s);
+
+            if (s > yusuan.value) {
+                console.log("超预算");
+            }
+        }
+    </script>
+</body>
+
+</html>
